@@ -63,17 +63,10 @@ class Tour
         void isSolved();
         void isClosed();
 
-    // DEBUG MEMBER FUNCTIONS
-
-
     public:
         Tour(int numRows, int numCols, int boardSize, int startX, int startY);
         ~Tour();
 
     // public membet functions
         void solveTour();
-
-    // accessors
-        inline int getMoveNum(){ return moveNum_; }
-        inline bool getValidTour(){ return validTour_; }
 };
