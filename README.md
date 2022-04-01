@@ -1,6 +1,6 @@
 This is a brute-force algorithm for the Knight's Tour written in C++. 
 
-This is a project assignment for my Discrete Mathematics course in which we were tasked to individually explore one of a myraid of different problems 
+This is a project assignment for my Discrete Mathematics course in which we were tasked with individually exploring one of a myraid of different problems 
 in discrete mathematics. I thought the knight's tour, being a hamiltonian path type problem was interesting so I decided to delve into that.
 
 While a brute-force algorithm is the least efficient way to solve this problem (there are a few other algorithms which give priority to certain moves), I 
