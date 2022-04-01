@@ -36,7 +36,6 @@ Tour::Tour(int numRows, int numCols, int boardSize, int startX, int startY)
 Tour::~Tour()
 {
     delete knight_;
-    board_.clear();
 }
 
 void Tour::move()
@@ -173,19 +172,6 @@ void Tour::backtrack()
     }
 }
 
-void Tour::printTour()
-{
-    for(int i = 0; i < rows_; i++)
-    {
-        for(int j = 0; j < cols_; j++)
-        {
-            std::cout << board_.at(j) << " ";
-        }
-
-        std::cout << "\n";
-    }
-}
-
 void Tour::isSolved()
 {
     if(moveNum_ == size_ - 1)
@@ -197,8 +183,6 @@ void Tour::isSolved()
 
         return;
     }
-    
-    move();
 }
 
 void Tour::isClosed()
@@ -223,6 +207,25 @@ void Tour::isClosed()
 
 void Tour::solveTour()
 {
-    move();
+    while(validTour_ == false)
+    {
+        move();
+    }
+
     printTour();
+
+    return;
+}
+
+void Tour::printTour()
+{
+    for(int i = 0; i < rows_; i++)
+    {
+        for(int j = 0; j < cols_; j++)
+        {
+            std::cout << board_[i * cols_ + j]->moveNum_ << "\t";
+        }
+
+        std::cout << "\n";
+    }
 }

@@ -14,11 +14,7 @@ int main()
     // instantiate Knight's Tour
     Tour knightsTour(ROWS, COLS, SIZE, STARTX, STARTY);
 
-    // Tour loop
-    while(knightsTour.getValidTour() == false)
-    {
-        knightsTour.solveTour();
-    }
+    knightsTour.solveTour();
     
     return 0;
 }
