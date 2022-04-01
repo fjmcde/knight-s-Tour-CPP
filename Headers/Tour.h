@@ -26,14 +26,6 @@ public:
         previousSpace_ = previousSpace;
         nextSpace_ = nextSpace;
     }
-
-    // destructor
-    ~Space()
-    {
-        // deallocate memory previously allocated for pointers
-        delete previousSpace_;
-        delete nextSpace_;
-    }
 };
 
 class Tour
