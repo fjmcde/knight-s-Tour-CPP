@@ -7,7 +7,4 @@ While a brute-force algorithm is the least efficient way to solve this problem (
 found it to be much more interesting. The algorithm is written to abstract away all of the implementation, leaving a very simple sub-30 line main file. 
 I decided to write a solver which is dynamically sized at runtime, so I could write one algorithm and test it with various sizes. This meant array-based 
 solutions were not possible as they are statically sized at compile-time. I decided it would be interesting to represent a two-dimensional board using a 
-standrd 1-D vector and perform algorithmic bound-checking for each attempted movement of the knight.
-
-In this initial commit, the algorithm results in a stack overflow because the recursion is implemented poorly. Because it's a brute-force algorithm, the 
-call stack gets out of hand rather quickly. This will be fixed in a later push, 
+standard 1-D vector and perform algorithmic bound-checking for each attempted movement of the knight.
